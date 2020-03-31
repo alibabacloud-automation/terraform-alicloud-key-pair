@@ -19,7 +19,7 @@ This module requires Terraform 0.12 and Terraform Provider AliCloud 1.66.0+.
 
 ```hcl
 module "key_pair" {
-  source   = "terraform-alicloud-modules/key_pair/alicloud"
+  source   = "terraform-alicloud-modules/key-pair/alicloud"
   region   = "cn-hangzhou"
   profile  = "Your-Profile-Name"
 
