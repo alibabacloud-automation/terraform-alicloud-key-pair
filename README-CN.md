@@ -16,7 +16,7 @@ terraform-alicloud-key-pair
 
 ```hcl
 module "key_pair" {
-  source   = "terraform-alicloud-modules/key_pair/alicloud"
+  source   = "terraform-alicloud-modules/key-pair/alicloud"
   region   = "cn-hangzhou"
   profile  = "Your-Profile-Name"
 
