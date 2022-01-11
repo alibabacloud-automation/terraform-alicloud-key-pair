@@ -76,4 +76,3 @@ variable "force" {
   type        = bool
   default     = true
 }
-

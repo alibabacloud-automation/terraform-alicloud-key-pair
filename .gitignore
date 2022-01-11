@@ -4,6 +4,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*.tfstate.backup
 
 # Crash log files
 crash.log
@@ -30,3 +31,11 @@ override.tf.json
 *idea*
 *.log
 *terraform*
+*.pem
+.DS_Store
+.idea
+*.bak
+*.bk
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+*.txt
