@@ -10,5 +10,5 @@ output "this_key_pair_fingerprint" {
 
 output "this_ecs_instance_ids" {
   description = "The list of ECS instance's ids."
-  value       = module.key_pair.this_ecs_instance_ids
+  value       = module.key_pair_attachment.this_ecs_instance_ids
 }
