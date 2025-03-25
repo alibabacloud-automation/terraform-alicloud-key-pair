@@ -1,4 +1,8 @@
-## 1.2.0 (Unreleased)
+## 2.1.0 (Unreleased)
+## 2.0.0 (March 25, 2025)
+
+- module: remove unused variables; examples/complete: improve the examples [GH-6](https://github.com/alibabacloud-automation/terraform-alicloud-key-pair/pull/6)
+
 ## 1.1.0 (December 10, 2021)
 
 ENHANCEMENTS:
