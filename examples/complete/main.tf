@@ -1,15 +1,20 @@
+provider "alicloud" {
+  region = "cn-zhangjiakou"
+}
+
 data "alicloud_zones" "default" {
 }
 
 data "alicloud_images" "default" {
-  name_regex = "^centos_6"
+  most_recent   = true
+  instance_type = data.alicloud_instance_types.default.instance_types[0].id
 }
 
 data "alicloud_instance_types" "default" {
   availability_zone    = data.alicloud_zones.default.zones[0].id
   cpu_core_count       = 2
   memory_size          = 8
-  instance_type_family = "ecs.g6"
+  instance_type_family = "ecs.g9i"
 }
 
 data "alicloud_resource_manager_resource_groups" "default" {
@@ -20,10 +25,11 @@ resource "alicloud_security_group" "default" {
 }
 
 resource "alicloud_instance" "default" {
-  security_groups = [alicloud_security_group.default.id]
-  vswitch_id      = module.vpc.this_vswitch_ids[0]
-  instance_type   = data.alicloud_instance_types.default.instance_types[0].id
-  image_id        = data.alicloud_images.default.images[0].id
+  security_groups      = [alicloud_security_group.default.id]
+  vswitch_id           = module.vpc.this_vswitch_ids[0]
+  instance_type        = data.alicloud_instance_types.default.instance_types[0].id
+  image_id             = data.alicloud_images.default.images[0].id
+  system_disk_category = "cloud_essd"
 }
 
 module "vpc" {
