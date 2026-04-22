@@ -1,3 +1,14 @@
+## [3.0.0](https://github.com/alibabacloud-automation/terraform-alicloud-key-pair/compare/v2.0.0...v3.0.0) (2026-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* add provider version constraint for aliyun/alicloud
+
+### Features
+
+* add provider version constraint for aliyun/alicloud ([703dc3a](https://github.com/alibabacloud-automation/terraform-alicloud-key-pair/commit/703dc3a443804f39a7df978f19d4f32c25a3bc6d))
+
 ## 2.1.0 (Unreleased)
 ## 2.0.0 (March 25, 2025)
 
